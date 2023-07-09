@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url'
 // https://www.npmjs.com/package/vite-svg-loader
-import svgLoader from 'vite-svg-loader'
+// import svgLoader from 'vite-svg-loader'
 
 import { dirname, join } from 'path'
 const currentDir = dirname(fileURLToPath(import.meta.url))
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   css: [join(currentDir, './assets/css/tailwind.css')],
 
-  vite: {
+  /* vite: {
     plugins: [
       svgLoader({
         svgo: true,
@@ -23,5 +23,5 @@ export default defineNuxtConfig({
         },
       }),
     ],
-  },
+  }, */
 })

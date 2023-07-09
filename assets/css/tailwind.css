@@ -114,7 +114,7 @@ textarea:focus {
   animation: spin 0.5s linear infinite;
 }
 .spin-yellow {
-  @apply border-primary;
+  @apply border-primary border-t-transparent;
 }
 @keyframes spin {
   0% {

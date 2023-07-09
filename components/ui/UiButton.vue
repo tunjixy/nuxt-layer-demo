@@ -31,15 +31,12 @@
     v-bind="$attrs"
   >
     <slot>Submit</slot>
-    <div
-      v-if="loading"
-      :class="{ spin: primary, 'spin-yellow': outlinePrimary }"
-    />
+    <div v-if="loading" :class="[primary ? 'spin' : 'spin-yellow']" />
   </button>
 </template>
 
 <script setup lang="ts">
-import type { PropType } from "vue";
+import type { PropType } from 'vue'
 
 defineProps({
   loading: {
@@ -91,12 +88,12 @@ defineProps({
     default: false,
   },
   type: {
-    type: String as PropType<"button" | "submit">,
-    default: "button",
+    type: String as PropType<'button' | 'submit'>,
+    default: 'button',
   },
   disabled: {
     type: Boolean,
     default: false,
   },
-});
+})
 </script>
