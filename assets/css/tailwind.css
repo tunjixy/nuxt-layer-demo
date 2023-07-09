@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply min-h-[42px] px-6 py-1 text-base font-semibold capitalize tracking-wide transition duration-300 ease-linear focus:bg-primary-dark focus:outline-none focus:outline-dashed focus:outline-primary disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply text-white bg-primary hover:bg-primary-dark focus:shadow-outline-primary active:bg-primary disabled:bg-primary-light/30;
+  }
+  .btn-outline-primary {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white focus:shadow-outline-primary active:bg-primary-dark disabled:opacity-50;
+  }
+  .btn-text {
+    @apply text-primary hover:bg-primary/10 focus:shadow-outline-primary disabled:opacity-50;
+  }
+  .btn-red {
+    @apply text-white bg-red-500 hover:bg-red-700 disabled:cursor-not-allowed;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply antialiased bg-background font-Apercu text-dark-text;
+}
+
+input:focus,
+textarea:focus {
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@screen md {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@font-face {
+  font-family: 'ApercuPro';
+  src: url('../fonts/apercu-pro/ApercuPro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ApercuPro';
+  src: url('../fonts/apercu-pro/ApercuPro-Medium.woff') format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'ApercuPro';
+  src: url('../fonts/apercu-pro/ApercuPro-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+/* Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease-in;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.slide-over-enter-active,
+.slide-over-leave-active {
+  transition: all 0.3s ease-out;
+}
+.slide-over-enter-from,
+.slide-over-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-nav-enter-active,
+.slide-nav-leave-active {
+  transition: all 0.2s ease-out;
+}
+.slide-nav-enter-from,
+.slide-nav-leave-to {
+  transform: translateX(-100%);
+}
+
+.dropdown-fade-enter-active,
+.dropdown-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-fade-enter-from,
+.dropdown-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+.spin,
+.spin-yellow {
+  @apply w-5 h-5 border-2 border-white border-solid rounded-full border-t-transparent;
+  animation: spin 0.5s linear infinite;
+}
+.spin-yellow {
+  @apply border-primary;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
