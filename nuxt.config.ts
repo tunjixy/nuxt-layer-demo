@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
 
-  css: [join(currentDir, './assets/css/tailwind.css')],
+  // css: [join(currentDir, './assets/css/tailwind.css')],
 
   /* vite: {
     plugins: [
