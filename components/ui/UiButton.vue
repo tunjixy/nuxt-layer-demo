@@ -14,9 +14,12 @@
     :class="{
       'min-h-[30px]': small,
       'min-h-[50px]': large,
-      'btn-primary': primary,
-      'btn-outline-primary': outlinePrimary,
-      'btn-text': text,
+      'text-white bg-primary hover:bg-primary-dark focus:shadow-outline-primary active:bg-primary disabled:bg-primary-light/30':
+        primary,
+      'border border-primary text-primary hover:bg-primary hover:text-white focus:shadow-outline-primary active:bg-primary-dark disabled:opacity-50':
+        outlinePrimary,
+      'text-primary hover:bg-primary/10 focus:shadow-outline-primary disabled:opacity-50':
+        text,
       'btn-red': red,
       'shadow-btn': raised,
       'rounded-md': rounded,
@@ -27,7 +30,7 @@
     }"
     :type="type"
     :disabled="disabled"
-    class="block btn"
+    class="block min-h-[42px] px-6 py-1 text-base font-semibold capitalize tracking-wide transition duration-300 ease-linear focus:bg-primary-dark focus:outline-none focus:outline-dashed focus:outline-primary disabled:cursor-not-allowed;"
     v-bind="$attrs"
   >
     <slot>Submit</slot>

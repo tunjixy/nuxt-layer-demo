@@ -11,14 +11,18 @@
       @click="closeAlert"
       class="absolute top-0 bottom-0 right-0 px-4 py-3 ml-10"
     >
-      <TimesIcon :class="alertStyle" class="w-6 h-6" />
+      <Icon
+        name="iconamoon:sign-times-light"
+        :class="alertStyle"
+        class="w-6 h-6"
+      />
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
 import { PropType } from 'vue'
-import TimesIcon from '@/assets/icons/times.svg?component'
+// import TimesIcon from '@/assets/icons/times.svg?component'
 
 type STATUS = 'success' | 'error' | 'info' | 'warning'
 
@@ -37,7 +41,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits<{
+defineEmits<{
   (e: 'close'): void
 }>()
 
