@@ -1,11 +1,11 @@
-// import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'url'
 
-// import { dirname, join } from 'path'
-// const currentDir = dirname(fileURLToPath(import.meta.url))
+import { dirname, join } from 'path'
+const currentDir = dirname(fileURLToPath(import.meta.url))
 
-import { createResolver } from '@nuxt/kit'
+// import { createResolver } from '@nuxt/kit'
 
-const { resolve } = createResolver(import.meta.url)
+// const { resolve } = createResolver(import.meta.url)
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
   ],
 
-  css: [resolve('./assets/css/main.css')],
+  // css: [resolve('./assets/css/main.css')],
 
-  // css: [join(currentDir, './assets/css/tailwind.css')],
+  css: [join(currentDir, './assets/css/main.css')],
 })
